@@ -1,6 +1,6 @@
 var gulp = require('gulp');
 var _ = require('underscore');
-var Elixir = require('laravel-elixir');
+var Elixir = require('secret-elixir');
 var inSequence = require('run-sequence');
 
 

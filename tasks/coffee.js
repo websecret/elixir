@@ -1,5 +1,5 @@
 var gulp   = require('gulp');
-var Elixir = require('laravel-elixir');
+var Elixir = require('secret-elixir');
 
 var $ = Elixir.Plugins;
 var config = Elixir.config;

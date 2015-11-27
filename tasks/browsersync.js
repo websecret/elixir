@@ -1,7 +1,7 @@
 var gulp = require('gulp');
 var _ = require('underscore');
 var gutils = require('gulp-util');
-var Elixir = require('laravel-elixir');
+var Elixir = require('secret-elixir');
 var browserSync = require('browser-sync').create();
 
 var config = Elixir.config;
