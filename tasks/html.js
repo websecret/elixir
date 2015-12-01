@@ -1,6 +1,6 @@
 var gulp   = require('gulp');
 var Elixir = require('secret-elixir');
-var rigger = require('rigger');
+var rigger = require('gulp-rigger');
 
 Elixir.extend('html', function(src, output) {
     var paths = new Elixir.GulpPaths().src(src).output(output);
