@@ -158,8 +158,7 @@ var config = {
 
             // https://www.npmjs.com/package/gulp-autoprefixer#api
             options:  {
-                browsers: ['last 2 versions'],
-                cascade: false
+                browsers: ['last 2 versions']
             }
         },
 
