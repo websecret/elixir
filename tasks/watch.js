@@ -18,12 +18,6 @@ gulp.task('watch', function() {
     var tasks = _.sortBy(Elixir.tasks, 'name');
     var mergedTasks = {};
 
-    if (isWatchingBrowserify(tasks)) {
-        Elixir.config.js.browserify.watchify.enabled = true;
-
-        gulp.start('browserify');
-    }
-
     tasks.forEach(function(task) {
         if (task.name in mergedTasks) {
             return mergedTasks[task.name].watchers = _.union(mergedTasks[task.name].watchers, task.watchers);
@@ -43,14 +37,3 @@ gulp.task('watch', function() {
         }
     });
 });
-
-
-/**
- * Determine if Browserify is included in the list.
- *
- * @param  {object} tasks
- * @return {Boolean}
- */
-var isWatchingBrowserify = function(tasks) {
-    return _.contains(_.pluck(tasks, 'name'), 'browserify');
-};
