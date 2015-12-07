@@ -6,6 +6,8 @@ Elixir.extend('html', function(src, output) {
     var paths = new Elixir.GulpPaths().src(src).output(output);
 
     new Elixir.Task('html', function() {
+        this.log(paths.src, paths.output);
+
         return (
             gulp
             .src(paths.src.path)
