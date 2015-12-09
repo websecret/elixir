@@ -37,7 +37,7 @@ Also, there is a `--production` flag used for minification.
 `mix.styles` - concatenates `css` files + autoprefixer
 
 ### JS
-`mix.scripts` - concatenates `js` files
+`mix.scripts` - concatenates `js` files  
 `mix.babel` - transpiles `ES6` to `ES5`
 
 ### Less
@@ -47,7 +47,7 @@ Also, there is a `--production` flag used for minification.
 `mix.html` - passes `html` files to `gulp-rigger`
 
 ### Utils
-`mix.copy` - copies files to destination
+`mix.copy` - copies files to destination  
 `mix.concat` - concatenates files (useful when there is no need of minification in production mode)
 
 [Laravel elixir]: <https://github.com/laravel/elixir>
