@@ -41,7 +41,10 @@ Also, there is a `--production` flag used for minification.
 `mix.babel` - transpiles `ES6` to `ES5`
 
 ### Less
-`mix.less` - compiles less to css + autoprefixer
+`mix.less` - compiles less to css + autoprefixer + base64
+
+### Sass
+`mix.sass` - compiles sass to css + autoprefixer + base64
 
 ### HTML
 `mix.html` - passes `html` files to `gulp-rigger`
