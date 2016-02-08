@@ -199,7 +199,8 @@ var config = {
                 outputStyle: gutils.env.production
                     ? 'compressed'
                     : 'nested',
-                precision: 10
+                precision: 10,
+                includePaths: require('node-bourbon').includePaths
             }
         },
 
