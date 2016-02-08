@@ -6,26 +6,26 @@ var config = Elixir.config;
 
 /*
  |----------------------------------------------------------------
- | Less Compilation Task
+ | Sass Compilation Task
  |----------------------------------------------------------------
  |
- | This task will compile your Less, including minification and
- | and auto-prefixing. Less is one of the CSS pre-processors
- | supported by Elixir, along with the Sass CSS processor.
+ | This task will compile your Sass, including minification and
+ | and auto-prefixing. Sass is one of the CSS pre-precessors
+ | supported by Elixir, along with the Less CSS processor.
  |
  */
 
-Elixir.extend('less', function(src, output, options) {
+Elixir.extend('sass', function(src, output, options) {
     var paths = prepGulpPaths(src, output);
 
-    new Elixir.Task('less', function() {
+    new Elixir.Task('sass', function() {
         return compile({
-            name: 'Less',
-            compiler: require('gulp-less'),
+            name: 'Sass',
+            compiler: require('gulp-sass'),
             src: paths.src,
             output: paths.output,
             task: this,
-            pluginOptions: options || config.css.less.pluginOptions
+            pluginOptions: options || config.css.sass.pluginOptions
         });
     })
     .watch(paths.src.path)
@@ -35,12 +35,12 @@ Elixir.extend('less', function(src, output, options) {
 /**
  * Prep the Gulp src and output paths.
  *
- * @param  {string|array} src
+ * @param  {string|Array} src
  * @param  {string|null}  output
- * @return {object}
+ * @return {GulpPaths}
  */
 var prepGulpPaths = function(src, output) {
     return new Elixir.GulpPaths()
-        .src(src, config.get('assets.css.less.folder'))
+        .src(src, config.get('assets.css.sass.folder'))
         .output(output || config.get('public.css.outputFolder'), 'app.css');
 };
