@@ -58,9 +58,9 @@ Elixir.extend('browserify', function(src, output, baseDir, options) {
             paths
         );
     })
-    // We'll add this task to be watched, but Watchify
-    // will handle the process, to speed things up.
-        .watch();
+    .watch(paths.src.path)
+    .ignore(paths.output.path);
+
 });
 
 /**
