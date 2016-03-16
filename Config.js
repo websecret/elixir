@@ -269,6 +269,43 @@ var config = {
             }
         },
 
+        browserify: {
+            // https://www.npmjs.com/package/browserify#usage
+            options: {
+                cache: {},
+                packageCache: {}
+            },
+
+            plugins: [],
+
+            externals: [],
+
+            transformers: [
+                {
+                    name: 'babelify',
+
+                    // https://www.npmjs.com/package/gulp-babel#babel-options
+                    options: {
+                        presets: ['es2015', 'react']
+                    }
+                },
+
+                {
+                    name: 'partialify',
+
+                    // https://www.npmjs.com/package/partialify
+                    options: {}
+                }
+            ],
+
+            watchify: {
+                enabled: false,
+
+                // https://www.npmjs.com/package/watchify#usage
+                options: {}
+            }
+        },
+
         /*
          |----------------------------------------------------------------
          | CoffeeScript Compilation
