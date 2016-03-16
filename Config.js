@@ -269,6 +269,14 @@ var config = {
             }
         },
 
+        uglify: {
+            options: {
+                compress: {
+                    drop_console: true
+                }
+            }
+        },
+
         browserify: {
             // https://www.npmjs.com/package/browserify#usage
             options: {
