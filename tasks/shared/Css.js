@@ -22,7 +22,7 @@ module.exports = function(options) {
         })
         .pipe($.if(config.css.autoprefix.enabled, $.autoprefixer(config.css.autoprefix.options)))
         .pipe($.concat(options.output.name))
-        .pipe($.base64())
+        .pipe($.if(config.css.base64, $.base64()))
         .pipe($.if(config.production, $.cssnano()))
         .pipe($.if(config.sourcemaps, $.sourcemaps.write('.')))
         .pipe(gulp.dest(options.output.baseDir))
