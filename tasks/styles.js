@@ -50,8 +50,10 @@ var gulpTask = function(paths) {
         gulp
         .src(paths.src.path)
         .pipe($.if(config.sourcemaps, $.sourcemaps.init()))
+        .pipe($.if(config.css.autoprefix.enabled, $.autoprefixer(config.css.autoprefix.options)))
         .pipe($.concat(paths.output.name))
-        .pipe($.if(config.production, $.minifyCss(config.css.minifyCss.pluginOptions)))
+        .pipe($.if(config.css.base64, $.base64()))
+        .pipe($.if(config.production, $.cssnano()))
         .pipe($.if(config.sourcemaps, $.sourcemaps.write('.')))
         .pipe(gulp.dest(paths.output.baseDir))
         .pipe(new Elixir.Notification('Stylesheets Merged!'))
