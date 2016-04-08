@@ -153,7 +153,10 @@ var config = {
          |
          */
 
-        base64: false,
+        base64: {
+            enabled: true,
+            options: { }
+        },
 
         autoprefix: {
             enabled: true,

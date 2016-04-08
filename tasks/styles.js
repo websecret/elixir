@@ -52,7 +52,7 @@ var gulpTask = function(paths) {
         .pipe($.if(config.sourcemaps, $.sourcemaps.init()))
         .pipe($.if(config.css.autoprefix.enabled, $.autoprefixer(config.css.autoprefix.options)))
         .pipe($.concat(paths.output.name))
-        .pipe($.if(config.css.base64, $.base64()))
+        .pipe($.if(config.css.base64.enabled, $.base64(config.css.base64.options)))
         .pipe($.if(config.production, $.cssnano()))
         .pipe($.if(config.sourcemaps, $.sourcemaps.write('.')))
         .pipe(gulp.dest(paths.output.baseDir))
