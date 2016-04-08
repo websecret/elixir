@@ -155,7 +155,9 @@ var config = {
 
         base64: {
             enabled: true,
-            options: { }
+            options: {
+                extensions: ['svg']
+            }
         },
 
         autoprefix: {
