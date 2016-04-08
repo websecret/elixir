@@ -1,6 +1,6 @@
 {
   "name": "secret-elixir",
-  "version": "1.7.5",
+  "version": "1.8.0",
   "description": "Simplified version of Laravel elixir special for frontend",
   "main": "index.js",
   "scripts": {
