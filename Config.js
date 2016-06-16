@@ -272,7 +272,8 @@ var config = {
         babel: {
             // https://www.npmjs.com/package/gulp-babel#babel-options
             options: {
-                presets: ['es2015', 'react']
+                presets: ['es2015', 'react', 'stage-0'],
+                plugins: ['transform-flow-strip-types']
             }
         },
 
