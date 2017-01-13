@@ -342,51 +342,8 @@ var config = {
         }
     },
 
-    testing: {
+    pug : {
 
-        /*
-         |----------------------------------------------------------------
-         | PHPUnit Autotesting
-         |----------------------------------------------------------------
-         |
-         | Want to automatically trigger your PHPUnit tests. Not a prob!
-         | This object stores the defaults for the path to your tests
-         | folder, as well as any "gulp-phpunit" specific options.
-         |
-         */
-
-        phpUnit: {
-            path: 'tests',
-
-            // https://www.npmjs.com/package/gulp-phpunit#api
-            options: {
-                debug: true,
-                notify: true,
-                configurationFile: 'phpunit.xml'
-            }
-        },
-
-
-        /*
-         |----------------------------------------------------------------
-         | PHPSpec Autotesting
-         |----------------------------------------------------------------
-         |
-         | Want to automatically trigger your PHPSpec tests. Not a prob!
-         | This object stores the defaults for the path to your specs
-         | folder, as well as any "gulp-phpspec" specific options.
-         |
-         */
-
-        phpSpec: {
-            path: 'spec',
-
-            // https://www.npmjs.com/package/gulp-phpspec#api
-            options: {
-                verbose: 'v',
-                notify: true
-            }
-        }
     },
 
     /*
